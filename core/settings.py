@@ -64,7 +64,7 @@ ROOT_URLCONF = 'core.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR/ 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -129,3 +129,20 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+# Arquivos de Mídia (Uploads enviados pelos usuários, como fotos de produtos)
+# MEDIA_URL: endereço público no navegador para acessar as imagens (ex: http://localhost:8000/media/...)
+MEDIA_URL = '/media/'
+# MEDIA_ROOT: caminho físico no disco (na raiz do projeto) onde os arquivos enviados serão salvos
+MEDIA_ROOT = BASE_DIR / 'media'
+
+
+'''
+    Personalizamos a tela de login
+'''
+UNFOLD = {
+    "SITE_TITLE": "PDV admin",
+    "SITE_HEADER": 'Sistema PDV',
+    'SITE_SUBHEADER': 'Gestão de Loja',
+    'SITE_URL': None,
+}

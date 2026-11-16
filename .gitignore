@@ -9,3 +9,4 @@ __pycache__/
 # Configurações
 .vscode/
 .env
+media/
